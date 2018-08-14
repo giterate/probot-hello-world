@@ -1,0 +1,19 @@
+{
+  "name": "probot-hello-world",
+  "version": "0.0.1",
+  "description": "A probot script to write 'Hello World' into an issue when opened",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/giterate/probot-hello-world.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/giterate/probot-hello-world/issues"
+  },
+  "homepage": "https://github.com/giterate/probot-hello-world#readme"
+}
