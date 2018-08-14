@@ -2,18 +2,45 @@
   "name": "probot-hello-world",
   "version": "0.0.1",
   "description": "A probot script to write 'Hello World' into an issue when opened",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/giterate/probot-hello-world.git"
-  },
-  "author": "",
+  "author": "mmcknett <mmcknett@gmail.com>",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/giterate/probot-hello-world/issues"
+  "repository": "https://github.com/mmcknett/probot-hello-world.git",
+  "homepage": "https://github.com/mmcknett/probot-hello-world",
+  "bugs": "https://github.com/mmcknett/probot-hello-world/issues",
+  "keywords": [
+    "probot",
+    "github",
+    "probot-app"
+  ],
+  "scripts": {
+    "dev": "nodemon",
+    "start": "probot run ./index.js",
+    "lint": "standard --fix",
+    "test": "jest && standard",
+    "test:watch": "jest --watch --notify --notifyMode=change --coverage"
   },
-  "homepage": "https://github.com/giterate/probot-hello-world#readme"
+  "dependencies": {
+    "probot": "^7.0.0"
+  },
+  "devDependencies": {
+    "jest": "^22.4.3",
+    "nodemon": "^1.17.2",
+    "smee-client": "^1.0.2",
+    "standard": "^10.0.3"
+  },
+  "engines": {
+    "node": ">= 8.3.0"
+  },
+  "standard": {
+    "env": [
+      "jest"
+    ]
+  },
+  "nodemonConfig": {
+    "exec": "npm start",
+    "watch": [
+      ".env",
+      "."
+    ]
+  }
 }
